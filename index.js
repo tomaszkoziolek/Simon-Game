@@ -59,11 +59,13 @@ function restart() {
 }
 
 $(".btn").on("click", function(event) {
-    var kliknietyKolor = event.target.id;
-    sekwencjaGracza.push(kliknietyKolor);
-    dzwiek(kliknietyKolor);
-    animacjaKlikniecia(kliknietyKolor);
-    sprawdzOdpowiedz(sekwencjaGracza.length - 1);
+    if (graRozpoczeta) {
+        var kliknietyKolor = event.target.id;
+        sekwencjaGracza.push(kliknietyKolor);
+        dzwiek(kliknietyKolor);
+        animacjaKlikniecia(kliknietyKolor);
+        sprawdzOdpowiedz(sekwencjaGracza.length - 1);
+    }
 });
 
 $(document).on("keydown", function() {
