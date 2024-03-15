@@ -53,35 +53,42 @@ body {
 }
 
 #pomoc {
-  display: flex;
-  align-items: center;
-  position: absolute;
   top: 150px;
   left: 0;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem;
-  color: white;
   width: 400px;
   height: 500px;
-  background-color: rgb(31, 30, 30);
   padding: 20px;
   display: none;
 }
 
 #pomoc-btn {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  position: absolute;
   top: 0;
   left: 0;
   width: 150px;
   height: 50px;
-  background-color: rgb(31, 30, 30);
   border-radius: 25px;
+  cursor: pointer;
+}
+
+#sound {
+  justify-content: center;
+  top: 0;
+  left: 170px;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.dodatek {
+  display: flex;
+  align-items: center;
+  position: absolute;
   font-family: 'Press Start 2P', cursive;
   color: white;
-  cursor: pointer;
+  background-color: rgb(31, 30, 30);
 }

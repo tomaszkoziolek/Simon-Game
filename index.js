@@ -9,6 +9,7 @@ var sekwencja = [];
 var sekwencjaGracza = [];
 var poziom = 0;
 var graRozpoczeta = false;
+var soundOn = true;
 
 function nastepnaSekwencja() {
     sekwencjaGracza = [];
@@ -22,8 +23,10 @@ function nastepnaSekwencja() {
 }
 
 function dzwiek(kolor) {
-    var dzwiek = new Audio("sounds/" + kolor + ".mp3");
-    dzwiek.play();
+    if (soundOn) {
+        var dzwiek = new Audio("sounds/" + kolor + ".mp3");
+        dzwiek.play();
+    }
 }
 
 function animacjaKlikniecia(kolor) {
@@ -79,4 +82,13 @@ $(document).on("keydown", function() {
 
 $("#pomoc-btn").click(function() {
     $("#pomoc").toggle();
+})
+
+$("#sound").click(function() {
+    soundOn = !soundOn;
+    if (soundOn) {
+        $("#sound").text("Dźwięk: on");
+    } else {
+        $("#sound").text("Dźwięk: off");
+    }
 })
