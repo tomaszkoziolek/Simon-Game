@@ -73,8 +73,10 @@ $(".btn").on("click", function(event) {
 
 $(document).on("keydown touchend", function() {
     if (!graRozpoczeta){
-        nastepnaSekwencja();
-        graRozpoczeta = true;
+        setTimeout(function() {
+            nastepnaSekwencja();
+            graRozpoczeta = true;
+        }, 500);
     }
 });
 
