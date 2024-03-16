@@ -61,7 +61,7 @@ function restart() {
     graRozpoczeta = false;
 }
 
-$(".btn").on("click touchstart", function(event) {
+$(".btn").on("click", function(event) {
     if (graRozpoczeta) {
         var kliknietyKolor = event.target.id;
         sekwencjaGracza.push(kliknietyKolor);
