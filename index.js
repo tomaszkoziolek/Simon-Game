@@ -71,7 +71,7 @@ $(".btn").on("click", function(event) {
     }
 });
 
-$(document).on("keydown ontouchend", function() {
+$(document).on("keydown touchend", function() {
     if (!graRozpoczeta){
         nastepnaSekwencja();
         graRozpoczeta = true;
